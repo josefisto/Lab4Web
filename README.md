@@ -977,4 +977,46 @@ Dan langkah terakhir menglink pada bagi menu home.
 </p>
 
 3. Jika sudah save dan buka dan lakukan tes untuk membuka menu about dan contact
+
 4. Sekian terimakasih
+
+## Validasi HTML
+
+Selanjutnya validasi html dengan mengunjungi web [Validator HTML](validator.w3.org)
+
+1. Validasi lab4_blox.html
+
+<p align="center">
+	<img src="SS/tugas/oprog_lab4_box.png" alt="before">
+</p>
+Check :
+<p align="center">
+	<img src="SS/tugas/done_lab4_box.png" alt="after">
+</p>
+
+2. Validasi home.html
+<p align="center">
+	<img src="SS/tugas/oprog_home.png" alt="before">
+</p>
+Check :
+<p align="center">
+	<img src="SS/tugas/done_home.png" alt="after">
+</p>
+
+3. Validasi about.html
+<p align="center">
+	<img src="SS/tugas/oprog_menu_about.png" alt="before">
+</p>
+Check :
+<p align="center">
+	<img src="SS/tugas/done_menu_about.png" alt="after">
+</p>
+
+4. Validasi contact.html
+<p align="center">
+	<img src="SS/tugas/oprog_menu_kontak.png" alt="before">
+</p>
+Check :
+<p align="center">
+	<img src="SS/tugas/done_menu_kontak.png" alt="after">
+</p>
