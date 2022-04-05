@@ -51,7 +51,7 @@
 # Laporan Praktikum 4 - Layout
 
 ## Buka Aplikasi / Software Editor
-Software editor yang saya gunakan ialah Visual Studio Code
+Software editor yang saya gunakan ialah **Visual Studio Code**
 
 <p align="center">
 	<img src="SS/vscode.png" alt="vscode">
@@ -61,7 +61,7 @@ Software editor yang saya gunakan ialah Visual Studio Code
 </p>
 
 ## Dokumen HTML
-Persiapan membuat dokumen HTML dengan nama file lab4_box.html seperti berikut.
+Persiapan membuat dokumen HTML dengan nama file **lab4_box.html** seperti berikut.
 
 ```html
 <!DOCTYPE html>
@@ -91,7 +91,7 @@ Selanjutnya input kode sebagai berikut untuk membuat Box Element sisipkan setela
 ```
 
 ## CSS Float Property
-Selanjutnya tambahkan deklarasi CSS pada head untuk membuat float element, seperti berikut.
+Selanjutnya tambahkan float property untuk membuat float element, dengan kode style css berikut.
 
 ```html
 <style>
@@ -111,11 +111,17 @@ Selanjutnya tambahkan deklarasi CSS pada head untuk membuat float element, seper
 </style>
 ```
 
-Kemudian buka browser untuk melihat hasilnya.
+Kemudian buka browser / run untuk melihat hasilnya.
 
 <p align="center">
-	<img src="" alt="output">
+	<img src="SS/prak/prak_box_element.png" alt="box_element">
 </p>
+
+Properti **Float** digunakan untuk mengatur letak element secara horizontal (left and right). Properti float di bagi menjadi 2 jenis, yaitu ``float: left dan right``
+- Float Left, 
+  membuat elemen berada di kiri pada pondasi blok layout
+- Float Right, 
+  membuat elemen berada di kiri pada pondasi blok layout
 
 ## Clearfix Element
 Clearfix digunakan untuk mengatur element setelah float element. Property clear digunakan untuk
@@ -129,9 +135,13 @@ Tambahkan element div lainnya seteleah div3 seperti berikut.
  <div class="div2">Div 2</div>
  <div class="div3">Div 3</div>
  <div class="div4">Div 4</div>
+ <div class="div4">Div 5</div>
+ <div class="div4">Div 6</div>
 </section>
 ```
-Kemudian atur property clear pada CSS, seperti berikut.
+
+### Clear Left
+Kemudian atur property clear dengan menggunakan atribut left, seperti berikut.
 
 ```css
 .div4 {
@@ -140,14 +150,52 @@ Kemudian atur property clear pada CSS, seperti berikut.
  float: none;
 }
 ```
+
 Selanjutnya buka browser dan refresh kembali.
 
 <p align="center">
-	<img src="" alt="output_clearfix">
+	<img src="SS/prak/prak_clearfix_left.png" alt="output_clearfix_left">
 </p>
 
-Lakukan eksperimen terhadap penggunaan property clear dengan nilai lainnya (left, both, right),
-dan amati perubahannya.
+Clear left memblok 1 line tidak ada elemen yang akan tertampil pada garis sebelah kiri akan tergusur kebawah.
+
+### Clear Right
+Kemudian atur property clear dengan menggunakan atribut **right**, seperti berikut.
+
+```css
+.div5 {
+ background-color: rgb(27, 27, 32);
+ clear: right;
+ float: right;
+}
+```
+
+Selanjutnya Run atau tampilkan hasil :
+
+<p align="center">
+	<img src="SS/prak/prak_clearfix_right.png" alt="output_clearfix_right">
+</p>
+
+Clear right memblok 1 line tidak ada elemen yang akan tertampil pada garis samping kanan akan tergusur kebawah.
+
+### Clear Both
+Kemudian atur property clear dengan menggunakan atribut both, seperti berikut.
+
+```css
+.div6 {
+ background-color: rgb(60, 175, 45);
+ clear: both;
+ float: left;
+}
+```
+
+Selanjutnya Run atau tampilkan hasil :
+
+<p align="center">
+	<img src="SS/prak/prak_clearfix_both.png" alt="output_clearfix">
+</p>
+
+Clear both gabungan antara kiri dan kanan, dengan menggunakan atribut ini maka semua elemen yang berada kiri dan kanan akan berpindah kebawah.
 
 ## Membuat Layout Sederhana
 Selanjutnya membuat layout sederhana sesuai pada gambar di bawah tersebut.
@@ -180,13 +228,13 @@ Kode Html **home.html** :
 </html>
 ```
 
-Kemudian buat kerangka layout dengan semantics element seperti berikut.
+Kemudian buat kerangka layout dengan semantics element sesuaikan pada gambar berikut.
 
 <p align="center">
 	<img src="SS/cth_kerangka_layout.png" alt="contoh">
 </p>
 
-Kemudian tulis kode berikut dalam tag body sisipkan setelah tag div ``</div>``.
+Masukkan kode header sesuai kode dibawah ini.
 
 ```html
 <header>
@@ -208,24 +256,23 @@ Kemudian tulis kode berikut dalam tag body sisipkan setelah tag div ``</div>``.
 </footer>
 ```
 
-Kemudian buka browser dan lihat hasilnya.
+Selanjutnya run dan tampilkan hasilnya.
 
 <p align="center">
-	<img src="" alt="cth_output_polos">
+	<img src="SS/layout_seder/output_kerangka.png" alt="cth_output_polos">
 </p>
 
-Kemudian tambahkan kode CSS untuk membuat layoutnya dalam file **style.css** :
+Berikut merupakan kode style css untuk tampilan layout untuk struktur header **style.css** :
 
 ```css
 /* import google font */
 @import
-url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400
-;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import
-url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0
-,300;0,700;1,300&display=swap');
+url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
 /* Reset CSS */
-* {
+{
  margin: 0;
  padding: 0;
 }
@@ -250,10 +297,10 @@ header h1 {
 }
 ```
 
-Kemudian lihat hasilnya pada browser.
+Selanjutnya jalankan dan tampilkan hasilnya.
 
 <p align="center">
-	<img src="" alt="cth_output+layout">
+	<img src="SS/layout_seder/output_lay_seder.png" alt="cth_output+layout">
 </p>
 
 ### Navigasi
@@ -279,14 +326,14 @@ nav a:hover {
 }
 ```
 
-Kemudian lihat hasilnya :
+Kemudian jalankan dan tampilkan hasilnya.
 
 <p align="center">
-	<img src="" alt="cth_output+layout+nav">
+	<img src="SS/layout_seder/output_nav.png" alt="cth_output+layout+nav">
 </p>
 
 ### Hero Panel
-Membuat hero panel sesuaikan kode di bawah berikut pada html dan css :
+Membuat struktur hero panel sesuaikan kode di bawah berikut pada html dan css :
 
 Kode Html :
 ```html
@@ -322,7 +369,7 @@ Kode CSS :
 Output :
 
 <p align="center">
-	<img src="" alt="cth_output+layout+nav+hero">
+	<img src="SS/layout_seder/output_hero.png" alt="cth_output+layout+nav+hero">
 </p>
 
 ### Mengatur Layout Main dan Sidebar
@@ -339,7 +386,7 @@ Selanjutnya mengatur main content dan sidebar, tambahkan CSS float.
 }
 /* sidebar area */
 #sidebar {
- float: left;
+ float: right;
  width: 260px;
  padding: 20px;
 }
@@ -385,7 +432,7 @@ Kemudian tambahkan CSS :
 }
 .widget-box li {
  border-bottom:1px solid #eee;
-}
+ }
 .widget-box li a {
  padding:10px 16px;
  color:#333;
@@ -403,7 +450,7 @@ Kemudian tambahkan CSS :
 Output :
 
 <p align="center">
-	<img src="" alt="cth_output+layout+nav+sd.bar_wget">
+	<img src="SS/layout_seder/output_sidebar.png" alt="cth_output+layout+nav+sd.bar_wget">
 </p>
 
 ### Mengatur Footer
@@ -422,7 +469,7 @@ footer {
 Output :
 
 <p align="center">
-	<img src="" alt="cth_output+layout+nav+sd.bar_wget+footer">
+	<img src="SS/layout_seder/output_footer.png" alt="cth_output+layout+nav+sd.bar_wget+footer">
 </p>
 
 Menambahkan Elemen lainnya pada Main Content
@@ -509,7 +556,7 @@ box img {
 Output :
 
 <p align="center">
-	<img src="" alt="cth_output_maincontent">
+	<img src="SS/layout_seder/output_maincontent.png" alt="cth_output_maincontent">
 </p>
 
 ### Menambahkan Content Artikel
@@ -568,7 +615,7 @@ Kemudian tambahkan CSS.
 Output :
 
 <p align="center">
-	<img src="" alt="cth_output_layoutsederhana_clear">
+	<img src="SS/layout_seder/output_maincontent_divider.png" alt="cth_output_layoutsederhana_clear">
 </p>
 
 ### Pertanyaan dan Tugas
@@ -581,3 +628,353 @@ Output :
 
 => yang berisi form isian: nama, email, message, dll
 
+Jawaban :
+
+1. Layout untuk menu About
+
+Pertama silahkan buat folder baru dengan nama **About**, selanjutnya buat 2 file dengan nama **about.html** dan **about.css** untuk membuat layout.
+
+Selanjutnya isikan kode untuk html sebagai berikut.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Me</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="about.css">
+</head>	
+<body>
+	<div class="section">
+		<div class="container">
+			<div class="content-section">
+				<div class="title">
+					<h1>Jose Fisto</h1>
+				</div>
+				<div class="content">
+					<h3>Web Designer</h3>
+					<p>Sedang dalam mempelajari hal yang baru termasuk Web Design, dengan membuat design dari suatu web yang unik sehingga menarik untuk di lihat. Dengan harapan bisa membuat Website Pribadi (Personal Website) yang menarik dan banyak di kunjungi dengan website yang saya olah.
+						</p>
+					<div class="button">
+						<a href="">Selesai</a>
+					</div>
+				</div>
+				<div class="social">
+					<a href=""><i class="fab fa-facebook-f"></i></a>
+					<a href=""><i class="fab fa-twitter"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+			<div class="image-section">
+				<img src="image/yyy.jpg">
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
+```
+
+Dan untuk CSS :
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.section{
+	width: 100%;
+	min-height: 100vh;
+	background-color: rgb(133, 121, 121);
+}
+.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 100px;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+}
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:#5d5d5d;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: #532e2e;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #642121;
+	color:#fff;
+}
+.content-section .social{
+	margin: 40px 40px;
+}
+.content-section .social i{
+	color:#6d1818;
+	font-size: 30px;
+	padding:0px 10px;
+}
+.content-section .social i:hover{
+	color:#3d3d3d;
+}
+@media screen and (max-width: 768px){
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+.content-section .content .button{
+	text-align: center;
+}
+.content-section .content .button a{
+	padding:9px 30px;
+}
+.content-section .social{
+	text-align: center;
+}
+```
+
+Setelah itu jalankan dan tampilkan output :
+
+<p align="center">
+	<img src="SS/tugas/about_output.png" alt="output">
+</p>
+
+2. Layout untuk menu Contact
+
+Sama seperti sebelumnya buat folder dengan nama **Kontak**, lalu buat 2 file dengan nama **kontak.html** dan **style_kontak.css**.
+
+Selanjutnya isikan kode html sebagai berikut.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="style_kontak.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Kontak Saya</h2>
+				<input type="text" class="field" placeholder="Nama Anda">
+				<input type="text" class="field" placeholder="Email Anda">
+				<input type="text" class="field" placeholder="Telelpon +62">
+				<textarea placeholder="Pesan" class="field"></textarea>
+				<button class="btn">Kirim</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+```
+
+Dan untuk layout.
+
+```css
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/aj.png") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("img/aj.png") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #999728;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #a9cc47;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #838f1b;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+```
+
+Selanjutnya jalankan dan tampilkan hasil.
+
+<p align="center">
+	<img src="SS/tugas/contact_output.png" alt="output">
+</p>
+
+Dan langkah terakhir menglink pada bagi menu home.
+
+1. buka file **home.html** yang telah di buat sebelumnya
+
+2. Jika sudah pada bagian menu atau tag **nav**, ganti href dengan nama file html yang telah di buat sebelumnya seperti contoh sebagai berikut
+
+<p align="center">
+	<img src="SS/tugas/last.png" alt="before">
+</p>
+
+<p align="center">
+	<img src="SS/tugas/noice.png" alt="after">
+</p>
+
+3. Jika sudah save dan buka dan lakukan tes untuk membuka menu about dan contact
+4. Sekian terimakasih
